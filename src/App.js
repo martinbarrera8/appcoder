@@ -2,19 +2,20 @@ import React from 'react'
 import Header from './components/Header'
 import Main from './components/Main'
 import Footer from './components/Footer'
+import ItemListConteiner from './components/ItemListConteiner'
 import './estilos.css'
 import './sass/main.scss'
-import ItemListConteiner from './components/ItemListConteiner'
+import { BrowserRouter } from 'react-router-dom'
+
 
 function App() {
     return(
-        <>
-        <Header/>
-        <ItemListConteiner
-        nombre="Tutor de CoderHouse"/>
-        <Main/>
-        <Footer/>
-        </>
+        <BrowserRouter>
+            <Header/>
+            <ItemListConteiner/>
+            <Main/>
+            <Footer/>
+        </BrowserRouter>
     )
 }
 

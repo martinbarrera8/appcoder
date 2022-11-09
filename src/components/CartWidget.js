@@ -1,12 +1,13 @@
 import React from 'react'
-import PermIdentityIcon from '@mui/icons-material/PermIdentity';
-import { Button } from '@mui/material';
+import { Link } from 'react-router-dom'
 
 function CardWidget() {
 return(
-    <Button>
-    <PermIdentityIcon id='header-icon'/>
-    </Button>
+    <Link>
+        <div className='cardwidget'>
+        <img src='/img/carrito.svg' className='header-carrito' alt='Carrito de compra'/>
+        </div>
+    </Link>
 )
 }
 

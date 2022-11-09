@@ -1,23 +1,14 @@
 import React from 'react'
 import CardWidget from './CartWidget'
+import Nav from './Nav'
+
 
 function Header(){
     return(
         <header id='header'>
-            <img src='/img/energylogo.svg' className='header-logo' alt='Logo energy'/>
+                <img src='/img/energylogo.svg' className='header-logo' alt='Logo energy'/>
 
-                <ul className='header-ul'>
-                    <li className='header-li'>
-                        <a href='#'>Inicio</a>
-                    </li>
-                    <li className='header-li'>
-                        <a href='#'>Productos</a>
-                    </li>
-                    <li className='header-li'>
-                        <a href='#'>Contacto</a>
-                    </li>
-                </ul>
-
+                <Nav/>
                 <CardWidget/>
 
         </header>

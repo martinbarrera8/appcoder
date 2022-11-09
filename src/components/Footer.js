@@ -1,10 +1,11 @@
 import React from 'react'
-import NavBar from './NavBar'
+import Social from './Social'
+
 
 function Footer(){
     return(
         <footer id='footer'>
-            <NavBar/>
+            <Social/>
         </footer>
     )
 }
