@@ -1,9 +1,11 @@
 import React from 'react'
 
-function ItemListConteiner(prop) {
+function ItemListConteiner() {
     return(
         <div>
-            <p>Bienvenido {prop.nombre}</p>
+            <>
+                <p>Productos</p>
+            </>
         </div>
     )
 }

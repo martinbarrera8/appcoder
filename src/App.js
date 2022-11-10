@@ -12,7 +12,6 @@ function App() {
     return(
         <BrowserRouter>
             <Header/>
-            <ItemListConteiner/>
             <Main/>
             <Footer/>
         </BrowserRouter>

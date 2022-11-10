@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import CardWidget from './CartWidget'
 import Nav from './Nav'
 
@@ -6,8 +7,9 @@ import Nav from './Nav'
 function Header(){
     return(
         <header id='header'>
-                <img src='/img/energylogo.svg' className='header-logo' alt='Logo energy'/>
-
+    
+                <Link to="/"><img src='/img/energylogo.svg' className='header-logo' alt='Logo energy'/>
+                </Link>
                 <Nav/>
                 <CardWidget/>
 

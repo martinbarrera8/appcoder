@@ -48,9 +48,18 @@
     transition: 0.3s ease-in-out;
 
     &:hover{
-        background-color: rgb(12, 21, 55);
+        background-color: rgb(13, 23, 61);
     }
 }
 .header-carrito{
     width: 3rem;
 }
+
+//Nav
+.nav-link{
+    padding: 0 1rem;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
