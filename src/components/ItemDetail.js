@@ -1,12 +1,16 @@
 
+import Productos from "./Productos"
 
 const ItemDetail = () => {
 
+    const producto = Productos()
+
     return(
-        <div className="details__conteiner">
-           <h2>Energizante</h2>
-           <img className="details__img" src="/img/monsternegro.png" alt="Energizante"/>
-           <p>$500</p>
+        <div>
+           <h2>{producto.title}</h2>
+           <img src={producto.image} alt="Energizante"/>
+           <p>Detalles</p>
+           <p>Precio</p>
         </div>
     )
 }
