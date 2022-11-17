@@ -1,14 +1,25 @@
-import Productos from "./Productos";
+import Productos  from "./Productos";
 
-export const getProducts = () => {
+export const getProducts = (itemId) => {
     let simulacionPedido = new Promise((res) => {
         setTimeout(() => {
-            res(Productos);
+            res(Productos.find(producto=> producto.id === itemId));
         }, 2000);
     });
+    return simulacionPedido
+}
 
-    return simulacionPedido;
-};
+// import Productos from "./Productos";
+
+// export const getProducts = () => {
+//     let simulacionPedido = new Promise((res) => {
+//         setTimeout(() => {
+//             res(Productos);
+//         }, 2000);
+//     });
+
+//     return simulacionPedido;
+// };
 
 
 
