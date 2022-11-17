@@ -1,17 +1,35 @@
 
-import Productos from "./Productos"
+import Productos from "./Productos";
 
 const ItemDetail = () => {
 
-    const producto = Productos()
-
-    return(
+    const producto = Productos
+    return (
         <div>
-           <h2>{producto.title}</h2>
-           <img src={producto.image} alt="Energizante"/>
-           <p>Detalles</p>
-           <p>Precio</p>
+            <h2>{producto.title}</h2>
+            <img src={producto.image} alt='Energizante' />
+            <p>Detalles</p>
+            <p>Precio</p>
         </div>
-    )
-}
-export default ItemDetail
+    );
+};
+export default ItemDetail;
+
+// import Productos from "./Productos"
+
+// const ItemDetail = () => {
+
+//     const producto = Productos
+
+//     return(
+//         <div>
+//            <h2>{producto.title}</h2>
+//            <img src={producto.image} alt="Energizante"/>
+//            <p>Detalles</p>
+//            <p>Precio</p>
+//         </div>
+//     )
+// }
+// export default ItemDetail
+
+
