@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemList from './ItemList'
-import { getProducts } from './utils'
+import { getProductsByCategory } from './utils'
 
 
 function ItemListConteiner() {
@@ -10,6 +10,7 @@ function ItemListConteiner() {
     const [items, setItems] = useState([])
     const { cat } = useParams()
 
+    const categoryId = null
 
     useEffect(() => {
 
@@ -20,7 +21,7 @@ function ItemListConteiner() {
             console.log("Pido solo "+ cat)
         }
 
-        getProducts()
+        getProductsByCategory(categoryId)
         .then((respuesta) => {
             setItems(respuesta)
         })
@@ -31,6 +32,7 @@ function ItemListConteiner() {
 
 
     return(
+
         <div>
             {items.length === 0 ? <h1>Cargando...</h1> : <ItemList items={items}/>}
         </div>

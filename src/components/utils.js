@@ -2,9 +2,21 @@
 import Productos from "./Productos";
 
 export const getProducts = (itemId) => {
-    return Promise((res) => {
+    return new Promise((res) => {
         setTimeout(() => {
             res(Productos.find(producto=> producto.id === itemId));
+        }, 2000);
+    });
+}
+
+export const getProductsByCategory = (categoryId) => {
+    return new Promise((res) => {
+        setTimeout(() => {
+            if(categoryId)
+            res(Productos.filter(producto=> producto.id === categoryId));
+            else{
+                res(Productos)
+            }
         }, 2000);
     });
     }
