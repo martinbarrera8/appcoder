@@ -1,13 +1,13 @@
-import Productos  from "./Productos";
+
+import Productos from "./Productos";
 
 export const getProducts = (itemId) => {
-    let simulacionPedido = new Promise((res) => {
+    return Promise((res) => {
         setTimeout(() => {
             res(Productos.find(producto=> producto.id === itemId));
         }, 2000);
     });
-    return simulacionPedido
-}
+    }
 
 // import Productos from "./Productos";
 
