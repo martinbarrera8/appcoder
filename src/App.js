@@ -5,15 +5,22 @@ import Footer from './components/Footer'
 import './estilos.css'
 import './sass/main.scss'
 import { BrowserRouter } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
+import CustomProvider from './components/CustomProvider'
 
 
 function App() {
+
+  
     return(
-        <BrowserRouter>
-            <Header/>
-            <Main/>
-            <Footer/>
-        </BrowserRouter>
+        <CustomProvider>
+            <BrowserRouter>
+                <Header/>
+                <Main/>
+                <Footer/>
+                <ToastContainer/>
+            </BrowserRouter>
+        </CustomProvider>
     )
 }
 

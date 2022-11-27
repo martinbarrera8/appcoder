@@ -6,6 +6,11 @@ function Footer(){
     return(
         <footer id='footer'>
             <Social/>
+            <div>
+                <p>
+                © 2022 - Todos los derechos reservados
+                </p>
+            </div>
         </footer>
     )
 }

@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { toast } from 'react-toastify'
 import ItemList from './ItemList'
 import { getProductsByCategory } from './utils'
+
 
 
 function ItemListConteiner() {
@@ -14,19 +16,16 @@ function ItemListConteiner() {
 
     useEffect(() => {
 
-
-        if(!cat){
-            console.log("Pido todo")
-        }else{
-            console.log("Pido solo "+ cat)
-        }
+        toast.info("Cargando productos")
 
         getProductsByCategory(categoryId)
         .then((respuesta) => {
+            toast.dismiss()
+            toast.success("Productos cargados!",{autoClose: 1000})
             setItems(respuesta)
         })
         .catch((error) => {
-            console.log(error)
+            toast.error("Error al cargar los productos")
         })
     }, [cat])
 

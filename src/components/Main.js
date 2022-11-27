@@ -11,7 +11,6 @@ function Main(){
         <main id='main'>
             <Routes>
                 <Route path='/' element={<ItemListConteiner/>}/>
-                <Route path='/productos' element={<ItemListConteiner/>}/>
                 <Route path='/productos/:cat' element={<ItemListConteiner/>}/>
                 <Route path='/item/:id' element={<ItemDetailConteiner/>}/>
                 <Route path='/contacto' element={<p>Contacto</p>}/>

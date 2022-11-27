@@ -1,12 +1,16 @@
 
 import Productos from "./Productos";
 
-export const getProducts = (itemId) => {
-    return new Promise((res) => {
+const generatePromise = (operation, time = 2000) => {
+    return new Promise ((resolve, reject) => {
         setTimeout(() => {
-            res(Productos.find(producto=> producto.id === itemId));
-        }, 2000);
-    });
+            resolve(operation)
+        }, time)
+    })
+}
+
+export const getProducts = (itemId) => {
+    return generatePromise(Productos.find(producto=> producto.id === itemId))
 }
 
 export const getProductsByCategory = (categoryId) => {
@@ -21,40 +25,3 @@ export const getProductsByCategory = (categoryId) => {
     });
     }
 
-// import Productos from "./Productos";
-
-// export const getProducts = () => {
-//     let simulacionPedido = new Promise((res) => {
-//         setTimeout(() => {
-//             res(Productos);
-//         }, 2000);
-//     });
-
-//     return simulacionPedido;
-// };
-
-
-
-// import  Productos  from "./Productos"
-
-// export const getProducts = () => {
-   
-//     let productosIniciales = []
-
-   // for(let i = 0; i < 9; i++){
-    //     console.log(Productos())
-    //     productosIniciales.push(Productos())
-   // }
-
-//     productosIniciales.push(Productos)
-
-
-
-//     let simulacionPedido = new Promise((res)=>{
-//         setTimeout(()=>{
-//         res(productosIniciales)
-//         },2000)
-//     })
-
-//     return simulacionPedido
-// }
