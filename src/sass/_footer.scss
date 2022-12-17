@@ -5,9 +5,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    flex-direction: column;
+
 //NavBar
 .nav-a{
     color: white;
     padding: 0.5rem;
+}
+
+.footer__img{
+    width: 22rem;
+}
 }

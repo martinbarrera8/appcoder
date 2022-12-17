@@ -6,11 +6,10 @@ function Footer(){
     return(
         <footer id='footer'>
             <Social/>
-            <div>
+                <img src='/img/energyd.svg' className='footer__img' alt='Logo energy'/>
                 <p>
                 © 2022 - Todos los derechos reservados
                 </p>
-            </div>
         </footer>
     )
 }

@@ -8,6 +8,8 @@ import { BrowserRouter } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 import CustomProvider from './components/CustomProvider'
 
+import './firebase'
+
 
 function App() {
 

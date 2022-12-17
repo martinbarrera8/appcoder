@@ -10,7 +10,7 @@ return(
     <Link to="/Carrito">
         <div className='cardwidget'>
         <img src='/img/carrito.svg' className='header-carrito' alt='Carrito de compra'/>
-        <span>{valorDelContexto.cantidad}</span>
+        <span className='cantidadDelCarrito'>{valorDelContexto.cantidadTotal}</span>
         </div>
     </Link>
 )

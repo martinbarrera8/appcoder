@@ -1,36 +1,39 @@
-import { useContext } from "react";
-import { contexto } from "./CustomProvider";
-import ItemCount from "./ItemCount";
+import { useState } from "react"
+import { useCarrito } from "./CustomProvider"
+import ItemCount from "./ItemCount"
 
-const ItemDetail = ({item}) => {
+const ItemDetail = ({producto}) => {
 
+    const {agregarProducto} = useCarrito()
+    const [cantidad, setCantidad] = useState(1)
+    const [confirmado, setConfirmado] = useState(false)
+    
     const handleOnAdd = (cantidad) => {
         console.log("Se agregaron " + cantidad + " productos")
-        console.log(item)
+        console.log(producto)
+        setCantidad(cantidad)
+        setConfirmado(true)
     }
 
-    const valorDelContexto = useContext(contexto)
-    console.log(valorDelContexto)
-
-    const agregarAlCarrito = () => {
-        valorDelContexto.vaciarCarrito()
+    const handleClick = () => {
+        agregarProducto(producto, cantidad)
     }
 
     return (
-        <div className="details__conteiner">
-            <div>
-            <img className="details__img" src={item.image} alt='Energizante'/>
-            </div>
-
-            <div>
-                <h2>{item.title}</h2>
-                <p>Detalles</p>
-                <p>Precio</p>
-                <ItemCount handleOnAdd={handleOnAdd}/>
-                <button onClick={agregarAlCarrito}>Agregar al carrito</button>
-            </div>
+        <div>
+            <h2>{producto.title} - ${producto.price}</h2>
+                <div className="details__card__conteiner">
+                    <div className="details__card__conteiner__img">
+                        <img className="details__img" src={producto.image} alt={producto.title}/>
+                    </div>
+                    <div className="details__card__conteiner__count">
+                        <p>{producto.description}</p>
+                        <p>{producto.description}</p>
+                        <ItemCount init={cantidad} handleOnAdd={handleOnAdd}/>
+                        {confirmado && <button onClick={handleClick}>Agregar al carrito</button>}
+                    </div>
+                </div>
         </div>
-    );
-};
-
-export default ItemDetail;
+    )
+}
+export default ItemDetail

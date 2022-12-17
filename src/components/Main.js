@@ -13,7 +13,6 @@ function Main(){
                 <Route path='/' element={<ItemListConteiner/>}/>
                 <Route path='/productos/:cat' element={<ItemListConteiner/>}/>
                 <Route path='/item/:id' element={<ItemDetailConteiner/>}/>
-                <Route path='/contacto' element={<p>Contacto</p>}/>
                 <Route path='/carrito' element={<Carrito/>}/>
                 <Route path='*' element={<h1>404</h1>}/>
             </Routes>
