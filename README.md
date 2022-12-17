@@ -1,7 +1,12 @@
 # Proyecto Final Coder House.
 
+## Descripcion
 Se trata de un proyecto realizado para la escuela Coder House en el curso de ReactJs. Esta basado en el desarrollo de un e-commerce de delivery de Energizantes, para poder falicitar el llegado de estas bebidas para no tener que salir la casa o del lugar donde se encuentre.
 
+
+#### Tecnologías utilizadas
+
+HTMLCSSJAVASCRIPTReacjtJsNPMFirebase
 
 ### `npm start`
 
