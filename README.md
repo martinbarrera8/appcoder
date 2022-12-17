@@ -1,10 +1,7 @@
 # Proyecto Final Coder House.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Se trata de un proyecto realizado para la escuela Coder House en el curso de ReactJs. Esta basado en el desarrollo de un e-commerce de delivery de Energizantes, para poder falicitar el llegado de estas bebidas para no tener que salir la casa o del lugar donde se encuentre.
 
-## Available Scripts
-
-In the project directory, you can run:
 
 ### `npm start`
 
